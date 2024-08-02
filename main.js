@@ -6,12 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.text())
     .then((data) => {
       sandbox.load(data);
-      sandbox.setUniform("u_debug", 0.15);
+      sandbox.setUniform("u_debug", 0.5);
     })
     .catch((error) => console.error("Error loading shader:", error));
 });
-
-function animate() {
-  requestAnimationFrame(animate);
-}
-animate();
